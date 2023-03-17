@@ -11,13 +11,13 @@ elClearAll = document.querySelector(".button-clear-complete");
 elMoon = document.querySelector(".moon");
 elSun = document.querySelector(".sun");
 
-const todos = [];
+let todos = [];
 
-// const buttonClicked = function (param1, param2, param3) {
-//   param1.classList.add("buttonblue");
-//   param2.classList.remove("buttonblue");
-//   param3.classList.remove("buttonblue");
-// };
+const buttonClicked = function (param1, param2, param3) {
+  param1.classList.add("buttonblue");
+  param2.classList.remove("buttonblue");
+  param3.classList.remove("buttonblue");
+};
 
 //render
 const renderTodos = function (array, node) {
