@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-image: url("./image/Bitmapmoon.png");
+  background-repeat: no-repeat;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  margin: 80px auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.container__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moon {
+  margin-bottom: 50px;
+  margin-right: 20px;
+  transition: all ease 0.3s;
+}
+
+.sun {
+  display: none;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  transition: all ease 0.3s;
+}
+
+.todo__heading {
+  margin-bottom: 50px;
+  margin-left: 15px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align-last: left;
+}
+
+.form {
+  max-width: 100%;
+}
+
+.form__input {
+  max-width: 540px;
+  width: 100%;
+  padding: 23px 50px;
+  margin-bottom: 0;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #494c6b;
+  background: #ffffff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s all ease;
+}
+
+.form__input::placeholder {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #9495a5;
+}
+
+.todo__list {
+  margin: 0 auto;
+  padding-bottom: 70px;
+  max-width: 540px;
+  margin-top: 25px;
+  list-style-type: none;
+  background: #ffffff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 5px;
+  transition: 0.3s all ease;
+}
+
+.todo__item {
+  display: flex;
+  padding: 23px;
+  border-bottom: 1px solid #e3e4f1;
+}
+
+.todo__item__input {
+  margin-left: 10px;
+}
+
+.todo__item__input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #e3e4f1;
+  background: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.todo__item__input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+}
+
+.todo__item__input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  background-color: #fff;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.todo__item__input[type="checkbox"]:checked {
+  border: none;
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+
+.todo__item__value {
+  padding-left: 24px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #494c6b;
+}
+
+.todo__item__value-true {
+  text-decoration-line: line-through;
+  color: #d1d2da;
+}
+
+.todo__delete__button {
+  margin-left: auto;
+  margin-right: 0px;
+  background: transparent;
+  border: none;
+}
+
+.btns {
+  max-width: 600px;
+  margin-top: -30px;
+  margin-left: -50px;
+  text-align: right;
+}
+
+.btns > button {
+  padding-left: 10px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.194444px;
+  color: #9495a5;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btns > button:last-child {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.btns > button:hover {
+  color: #494c6b;
+}
+
+.btns > button:last-child:hover {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: right;
+  letter-spacing: -0.194444px;
+  color: #494c6b;
+}
+
+.button-all-score {
+  border-radius: 30px;
+  padding: 5px 4px 2px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.194444px;
+  background: #d9d9d9;
+  color: #fff;
+}
+
+.buttonblue {
+  color: #3a7cfd !important;
+}
+
+.body-clicked {
+  background-image: url("./image/Bitmapsun.png") !important;
+  background-repeat: no-repeat !important;
+  background-color: #25273d;
+}
+
+.form__input-clicked,
+.todo__list-clicked {
+  background: #25273d;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: 0.3s all ease;
+  color: #c8cbe7;
+}
+
+.todo__item-clicked {
+  border-bottom: 1px solid green;
+}
+
+.todo__item__value-clicked {
+  color: #c8cbe7 !important;
+}
+
+.todo__item-clicked {
+  border-bottom: 1px solid #393a4b;
+}
