@@ -11,7 +11,8 @@ elClearAll = document.querySelector(".button-clear-complete");
 elMoon = document.querySelector(".moon");
 elSun = document.querySelector(".sun");
 
-let todos = [];
+const storedtodos = localStorage.getItem("todos");
+const todos = storedtodos ? JSON.parse(storedtodos) : [];
 
 const buttonClicked = function (param1, param2, param3) {
   param1.classList.add("buttonblue");
@@ -66,6 +67,8 @@ elTodoForm.addEventListener("submit", (evt) => {
 
   todos.push(newTodo);
 
+  localStorage.setItem("todos", JSON.stringify(todos));
+
   renderTodos(todos, elTodoList);
 
   elTodoInput.value = "";
@@ -76,7 +79,7 @@ const handleCheck = function (id, array) {
   const foundtodo = array.find((todo) => todo.id == id);
 
   foundtodo.isCompleted = !foundtodo.isCompleted;
-
+  localStorage.setItem("todos", JSON.stringify(array));
   renderTodos(array, elTodoList);
 };
 
@@ -84,6 +87,7 @@ const handleCheck = function (id, array) {
 const handleDeletebutton = function (id, array) {
   const foundtodoIndex = array.findIndex((todo) => todo.id == id);
   array.splice(foundtodoIndex, 1);
+  localStorage.setItem("todos", JSON.stringify(array));
   renderTodos(array, elTodoList);
 };
 
@@ -163,3 +167,11 @@ elSun.addEventListener("click", (evt) => {
 
   elTodoListItem.forEach((item) => item.classList.toggle("todo__item-clicked"));
 });
+
+function hi(param) {
+  return param;
+}
+
+console.log(hi(""));
+
+renderTodos(todos, elTodoList);

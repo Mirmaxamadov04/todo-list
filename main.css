@@ -5,7 +5,9 @@
 }
 
 .body {
+  min-width: 100vw;
   background-image: url("./image/Bitmapmoon.png");
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
